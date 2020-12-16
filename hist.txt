@@ -1,0 +1,3 @@
+   470  aws cloudwatch put-metric-alarm --alarm-name forLAB5 --metric-name HealthyHostCount --statistic Average --period 300 --threshold 2 --comparison-operator LessThanThreshold --dimensions "Name=LoadBalancer,Value=app/forLAB4/dafee2b1cb6b986a,Name=TargetGroup,Value=targetgroup/forLAB4/c6fadfcae8f3808e" --evaluation-periods 1 --alarm-actions $TOPIC_ARN
+  477  aws cloudwatch put-metric-alarm --alarm-name forLAB5 --metric-name HealthyHostCount --statistic Average --period 300 --threshold 2 --comparison-operator LessThanThreshold --dimensions Name=LoadBalancer,Value=app/forLAB4/dafee2b1cb6b986a Name=TargetGroup,Value=targetgroup/forLAB4/c6fadfcae8f3808e --evaluation-periods 1 --alarm-actions $TOPIC_ARN --namespace AWS/ApplicationELB
+
